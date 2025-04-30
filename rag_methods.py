@@ -56,8 +56,8 @@ def load_doc_to_db():
                         elif doc_file.name.endswith(".docx"):
                             loader = Docx2txtLoader(file_path)
                         elif doc_file.type in ["text/plain", "text/markdown"]:
-                            loader = TextLoader(file_path)
-                        elif doc_file.name.endswith(".xlsx"):
+                            #loader = TextLoader(file_path)
+                        #elif doc_file.name.endswith(".xlsx"):
                             loader = UnstructuredExcelLoader(file_path, mode='elements')
                         elif doc_file.name.endswith(".xlsx"):
                             loader = AzureAIDocumentIntelligenceLoader(file_path)
