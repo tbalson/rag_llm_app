@@ -10,6 +10,7 @@ from langchain_community.document_loaders import (
     Docx2txtLoader,
     UnstructuredExcelLoader,
     CSVLoader,
+    AzureAIDocumentIntelligenceLoader,
 )
 # pip install docx2txt, pypdf
 from langchain_community.vectorstores import Chroma
@@ -58,6 +59,8 @@ def load_doc_to_db():
                             loader = TextLoader(file_path)
                         elif doc_file.name.endswith(".xlsx"):
                             loader = UnstructuredExcelLoader(file_path, mode='elements')
+                        elif doc_file.name.endswith(".xlsx"):
+                            loader = AzureAIDocumentIntelligenceLoader(file_path)
                         elif doc_file.name.endswith(".csv"):
                             loader = CSVLoader(file_path)
                         else:
