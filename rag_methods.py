@@ -8,6 +8,8 @@ from langchain_community.document_loaders import (
     WebBaseLoader, 
     PyPDFLoader, 
     Docx2txtLoader,
+    UnstructuredExcelLoader,
+    CSVLoader,
 )
 # pip install docx2txt, pypdf
 from langchain_community.vectorstores import Chroma
@@ -54,10 +56,14 @@ def load_doc_to_db():
                             loader = Docx2txtLoader(file_path)
                         elif doc_file.type in ["text/plain", "text/markdown"]:
                             loader = TextLoader(file_path)
+                        elif doc_file.name.endswith(".xlsx"):
+                            loader = UnstructuredExcelLoader(file_path, mode='elements')
+                        elif doc_file.name.endswith(".csv"):
+                            loader = CSVLoader(file_path)
                         else:
                             st.warning(f"Document type {doc_file.type} not supported.")
                             continue
-
+# Lets use a smarter lib https://python.langchain.com/v0.2/docs/integrations/document_loaders/microsoft_excel/ TBB 4/30/25
                         docs.extend(loader.load())
                         st.session_state.rag_sources.append(doc_file.name)
 
