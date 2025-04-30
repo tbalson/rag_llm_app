@@ -42,7 +42,7 @@ st.set_page_config(
 
 
 # --- Header ---
-st.html("""<h2 style="text-align: center;">🌎 <i> Mundell's LLM with RAG </i> 🌎 <br/> Tyler Balson <br/> Forked from: enricd </h2>""")
+st.html("""<h2 style="text-align: center;">🌎 <i> Mundell's LLM with RAG </i> 🌎 <br/> Development model based on GPT4.o </h2>""")
 
 
 # --- Initial Setup ---
