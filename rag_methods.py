@@ -19,6 +19,7 @@ from langchain_openai import OpenAIEmbeddings, AzureOpenAIEmbeddings
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.chains import create_history_aware_retriever, create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
+import networkx
 
 dotenv.load_dotenv()
 
