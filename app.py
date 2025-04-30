@@ -42,7 +42,7 @@ st.set_page_config(
 
 
 # --- Header ---
-st.html("""<h2 style="text-align: center;">🌎 <i> Mundells LLM with RAG </i> 🌎</h2>""")
+st.html("""<h2 style="text-align: center;">🌎 <i> Mundell's LLM with RAG </i> 🌎 <br/> Tyler Balson <br/> Forked from: enricd </h2>""")
 
 
 # --- Initial Setup ---
@@ -55,7 +55,7 @@ if "rag_sources" not in st.session_state:
 if "messages" not in st.session_state:
     st.session_state.messages = [
         {"role": "user", "content": "Hello"},
-        {"role": "assistant", "content": "Hi there! How can I assist you today?"}
+        {"role": "assistant", "content": "Hi there my fellow Mundell lad! How can I assist you today?"}
 ]
 
 
