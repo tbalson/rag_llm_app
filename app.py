@@ -34,15 +34,15 @@ else:
 
 
 st.set_page_config(
-    page_title="RAG LLM app?", 
-    page_icon="📚", 
+    page_title="Mundell RAG LLM app", 
+    page_icon="⚡", 
     layout="centered", 
     initial_sidebar_state="expanded"
 )
 
 
 # --- Header ---
-st.html("""<h2 style="text-align: center;">📚🔍 <i> Do your LLM even RAG bro? </i> 🤖💬</h2>""")
+st.html("""<h2 style="text-align: center;">🌎 <i> Mundells LLM with RAG </i> 🌎</h2>""")
 
 
 # --- Initial Setup ---
@@ -199,8 +199,8 @@ else:
 
 with st.sidebar:
     st.divider()
-    st.video("https://youtu.be/abMwFViFFhI")
-    st.write("📋[Medium Blog](https://medium.com/@enricdomingo/program-a-rag-llm-chat-app-with-langchain-streamlit-o1-gtp-4o-and-claude-3-5-529f0f164a5e)")
-    st.write("📋[GitHub Repo](https://github.com/enricd/rag_llm_app)")
+    #st.video("https://youtu.be/abMwFViFFhI")
+    #st.write("📋[Medium Blog](https://medium.com/@enricdomingo/program-a-rag-llm-chat-app-with-langchain-streamlit-o1-gtp-4o-and-claude-3-5-529f0f164a5e)")
+    st.write("📋[GitHub Repo](https://github.com/mundellassociates)")
 
     
