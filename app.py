@@ -54,8 +54,8 @@ if "rag_sources" not in st.session_state:
 
 if "messages" not in st.session_state:
     st.session_state.messages = [
-        {"role": "user", "content": "Hello"},
-        {"role": "assistant", "content": "Hi there my fellow Mundell lad! How can I assist you today?"}
+        {"role": "user", "content": "Test Hello"},
+        {"role": "assistant", "content": "Cheers, my fellow Mundell lad! How can I assist you today?"}
 ]
 
 
@@ -131,7 +131,7 @@ else:
         # File upload input for RAG with documents
         st.file_uploader(
             "📄 Upload a document", 
-            type=["pdf", "txt", "docx", "md", "xlsx", "csv"],
+            type=["pdf", "txt", "docx", "md", "xlsx", "csv", "py"],
             accept_multiple_files=True,
             on_change=load_doc_to_db,
             key="rag_docs",
