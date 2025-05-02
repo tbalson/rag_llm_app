@@ -63,7 +63,7 @@ def load_doc_to_db():
                             #loader = UnstructuredExcelLoader(file_path, mode='elements')
                         elif doc_file.name.endswith(".xlsx"):
                             loader = AzureAIDocumentIntelligenceLoader(
-                                 api_endpoint= azure_endpoint=os.getenv("AZ_OPENAI_ENDPOINT"),
+                                 api_endpoint=os.getenv("AZ_OPENAI_ENDPOINT"),
                                  api_key=os.getenv("AZ_OPENAI_API_KEY"),
                                  file_path=file_path,
                                  api_model="prebuilt-layout"
