@@ -59,15 +59,15 @@ def load_doc_to_db():
                             loader = Docx2txtLoader(file_path)
                         elif doc_file.type in ["text/plain", "text/markdown"]:
                             loader = TextLoader(file_path)
-                        #elif doc_file.name.endswith(".xlsx"):
-                            #loader = UnstructuredExcelLoader(file_path, mode='elements')
                         elif doc_file.name.endswith(".xlsx"):
-                            loader = AzureAIDocumentIntelligenceLoader(
-                                 api_endpoint=os.getenv("AZ_OPENAI_ENDPOINT"),
-                                 api_key=os.getenv("AZ_OPENAI_API_KEY"),
-                                 file_path=file_path,
-                                 api_model="prebuilt-layout"
-                            )
+                            loader = UnstructuredExcelLoader(file_path)
+                       # elif doc_file.name.endswith(".xlsx"):
+                        #    loader = AzureAIDocumentIntelligenceLoader(
+                         #        api_endpoint=os.getenv("AZ_OPENAI_ENDPOINT"),
+                          #       api_key=os.getenv("AZ_OPENAI_API_KEY"),
+                            #     file_path=file_path,
+                            #     api_model="prebuilt-layout"
+                            #)
                         elif doc_file.name.endswith(".py"):
                             loader = PythonLoader(file_path)
                         elif doc_file.name.endswith(".csv"):
