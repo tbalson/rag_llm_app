@@ -31,7 +31,8 @@ if "AZ_OPENAI_API_KEY" not in os.environ:
         "anthropic/claude-3-5-sonnet-20240620",
     ]
 else:
-    MODELS = ["azure-openai/gpt-4o"]
+    MODELS = ["azure-openai/gpt-4o",
+              "azure-openai/gpt-4o-test"]
 
 
 st.set_page_config(
