@@ -86,7 +86,7 @@ with st.sidebar:
     else:
         openai_api_key, anthropic_api_key = None, None
         st.session_state.openai_api_key = None #TBB commented out
-        az_openai_api_key = os.getenv("AZ_OPENAI_API_KEY")
+        az_openai_api_key = os.getenv.get("AZ_OPENAI_API_KEY")
         st.session_state.az_openai_api_key = az_openai_api_key
 
 
