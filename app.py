@@ -33,7 +33,7 @@ if "AZ_OPENAI_API_KEY" not in os.environ:
 else:
     MODELS = [
         "azure-openai/gpt-4o",
-        "azure-openai/gpt-4o-test"
+        "azure-openai/gpt-4o-test",
     ]
 
 
