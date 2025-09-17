@@ -28,11 +28,13 @@ if "AZ_OPENAI_API_KEY" not in os.environ:
         "openai/gpt-4o",
         "openai/gpt-4o-test",
         "openai/gpt-4o-mini",
-        "anthropic/claude-3-5-sonnet-20240620"
+        "anthropic/claude-3-5-sonnet-20240620",
     ]
 else:
-    MODELS = ["azure-openai/gpt-4o",
-              "azure-openai/gpt-4o-test"]
+    MODELS = [
+        "azure-openai/gpt-4o",
+        "azure-openai/gpt-4o-test"
+    ]
 
 
 st.set_page_config(
